@@ -1,4 +1,5 @@
-let URL = "https://japceibal.github.io/emercado-api/cats_products/101.json"
+let catID = JSON.parse(localStorage.getItem("catID"))
+let URL = `https://japceibal.github.io/emercado-api/cats_products/${catID}.json`
 
 fetch(URL)
     .then(res => res.json())

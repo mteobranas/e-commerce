@@ -11,6 +11,12 @@ document.addEventListener("DOMContentLoaded", function(){
         window.location.href = "login.html"
     }
 
+    let rawUser = JSON.parse(localStorage.getItem("user"))
+    let user = rawUser.email
+
+    let profile = document.getElementById("profile")
+    profile.textContent = user
+
     document.getElementById("autos").addEventListener("click", function() {
         localStorage.setItem("catID", 101);
         window.location = "products.html"
