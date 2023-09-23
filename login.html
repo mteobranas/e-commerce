@@ -19,14 +19,19 @@
 <body>
   <main class="mt-5">
     <div class="container">
-      <form id="login-form">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email">
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password">
-        <input type="submit" value="Iniciar Sesión">
-      </form>
+      <!-- <div class="alert alert-danger text-center" role="alert">
+        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+      </div> -->
     </div>
+    
+    <form id="loginForm">
+      <h1 id="login">Login</h1>
+      <input type="text" id="username" placeholder="Nombre de usuario"/>
+      <input type="password" id="password" placeholder="Contraseña"/>
+      <button type="submit" class="btn btn-primary btn-block mb-4"
+      >Iniciar Sesión</button>
+      
+    </form>
   </main>
   <footer class="text-muted">
     <div class="container">
@@ -36,7 +41,7 @@
       <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a></p>
     </div>
   </footer>
-  <script src="js/login.js" async></script>
+  <script src="js/login.js"></script>
 </body>
 
 </html>

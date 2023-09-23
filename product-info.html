@@ -31,17 +31,49 @@
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="my-profile.html" id="user"></a>
+          </li>
+            <a id="cerrar_sesion" class="nav-link" style="cursor: pointer"
+            >Cerrar Sesion</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+  
+  
+  
+  
   <main>
+
+    <div id="cardsContainer" class="container"></div>
+
+    <div id="commentsContainer" class="container"></div>
+    
+    <!-- Creamos la casilla de comentarios y las calificacion en estrellas -->
+    
+    <br><br><br>
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+    <form>
+      <div class="form-group">
+        <label for="comment">Deja tu comentario:</label>
+        <textarea class="form-control" name="comment" id="comment" rows="3" required></textarea>
       </div>
-    </div>
+      <div class="form-group"> <br>
+        <label for="rating">Calificación:</label>
+        <select class="form-select" name="rating" id="rating">
+          <option value="1">⭐</option>
+          <option value="2">⭐⭐</option>
+          <option value="3">⭐⭐⭐</option>
+          <option value="4">⭐⭐⭐⭐</option>
+          <option value="5">⭐⭐⭐⭐⭐</option>
+        </select>
+      </div> <br>
+      <div class="form-group">
+      <button id="btn" type="button" onclick="addComment()" class="btn btn-primary">Enviar</button>
+      </div>
+    </form>
+  </div>
   </main>
   <footer class="text-muted">
     <div class="container">

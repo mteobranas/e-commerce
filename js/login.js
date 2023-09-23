@@ -1,19 +1,27 @@
-const form = document.getElementById("login-form")
+document.addEventListener("DOMContentLoaded", function () {
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault()
+  const loginForm = document.getElementById("loginForm");
 
-    let email = document.getElementById("email").value
-    let password = document.getElementById("password").value
+  loginForm.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-    let user = {email: email, password: password}
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
 
-    localStorage.setItem("user", JSON.stringify(user))
-
-    if (!email || !password) {
-        return alert("Por favor, rellene todos los campos")
+    // Validación del usuario
+    if (!username || !password) {
+      return alert("Por favor, rellene todos los campos")
     } else {
-        localStorage.setItem("userStatus", true)
-        window.location.href = "index.html"
+      localStorage.setItem("userStatus", true)
     }
-})
+
+    // Almacenar el nombre en localStorage para usarlo en home.js
+    localStorage.setItem("username", username);
+    localStorage.setItem("password", password);
+
+    // Redirigir a la página principal
+    window.location.href = "index.html";
+  });
+});
+
+

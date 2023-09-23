@@ -31,19 +31,72 @@
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="my-profile.html" id="user"></a>
+          </li>
+          <li class="nav-item">
+            <a id="cerrar_sesion" class="nav-link" style="cursor: pointer"
+            >Cerrar Sesion</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
   <main class="pb-5 container">
-    <div class="container" id="contenedor">
-      <div class="product-title">
-        <h1>Productos</h1>
-        <p>Verás aquí todos los productos de la categoría Autos</p>
+    <div class="container">
+      <div class="text-center p-4">
+        <h2>Productos</h2>
+        <p class="lead">Verás aquí todos los productos de la categoría <span id="title"></span></p>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col text-end">
+            <div class="btn-group btn-group-toggle mb-1" data-bs-toggle="buttons">
+              <input type="radio" class="btn-check" name="options" id="sortAsc">
+              <label class="btn btn-light" for="sortAsc">Menor precio</label>
+              <input type="radio" class="btn-check" name="options" id="sortDesc">
+              <label class="btn btn-light" for="sortDesc">Mayor precio</label>
+              <input type="radio" class="btn-check" name="options" id="sortByCount" checked>
+              <label class="btn btn-light" for="sortByCount"><i class="fas fa-sort-amount-down mr-1"></i></label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 offset-lg-6 col-md-12 mb-1 container">
+            <div class="row container p-0 m-0">
+              <div class="col">
+                <label class="font-weight-normal d-flex justify-content-end my-2" for="userInputFilter">Search:</label>
+              </div>
+              <div class="col">
+                <input class="form-control" type="search" placeholder="product" id="userInputFilter">
+              </div>
+            </div>
+            <div class="row container p-0 m-0">
+              <div class="col">
+                <label class="font-weight-normal d-flex justify-content-end my-2" for="rangeFilterCountMin">Precio:</label>
+              </div>
+              <div class="col">
+                <input class="form-control" type="number" placeholder="min." id="rangeFilterCountMin">
+              </div>
+              <div class="col">
+                <input class="form-control" type="number" placeholder="máx." id="rangeFilterCountMax">
+              </div>
+              <div class="col-3 p-0">
+                <div class="btn-group" role="group">
+                  <button class="btn btn-light btn-block" id="rangeFilterCount">Filtrar</button>
+                  <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="list-group" id="prod-list-container">
+          </div>
+        </div>
       </div>
     </div>
   </main>
+
   <footer class="text-muted">
     <div class="container">
       <p class="float-end">
